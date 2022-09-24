@@ -7,6 +7,8 @@ header-only console color library for C.
 
 ## Usage
 
+![Usage Screenshot](https://github.com/avolgha/chalk.h/blob/dev/screenshot.png)
+
 Download the `chalk.h` file and put it anywhere you want.  
 Then you can include it in your project and start coding:
 
@@ -23,6 +25,25 @@ int main(void)
 ```
 
 All functions can be found in the `test.c` file.
+
+### The `chalk(...)` function
+
+Optionally, you can use the builtin `chalk` function to chain the formatting process.
+
+As input, you have to provide the message to format and an integer with the required flags.  
+These flags can be found in the `chalk.h` file.
+
+```c
+#include <stdio.h>
+#include "chalk.h"
+#define CHALK_H_IMPLEMENTATION_
+
+int main(void)
+{
+    printf("%s", chalk("Hello World!", COLOR_GREEN | COLOR_UNDERLINE));
+    return 0;
+}
+```
 
 ## Testing
 
